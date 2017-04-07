@@ -94,6 +94,12 @@ int main(int argc, char* argv[]) {
 	// Where XX is the maximum element's value (an integer).
 	
 	// WRITEME
+	// Create a sum visitor and visit the tree with it.
+	MaxVisitor* max = new MaxVisitor;
+	tree->accept(max);
+	// Print the computed sum.
+	std::cout<<"Max: "<<max->max<<std::endl;
+	delete max;
 	
 	deleteTree(tree);
 	return 0;
